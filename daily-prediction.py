@@ -113,8 +113,9 @@ class QLearningTrader:
 
 
 # Load and preprocess the financial dataset
-dataset = pd.read_csv("/content/GBPUSD1440.csv")
-dataset = dataset[["Date", "Close"]].values
+dataset = pd.read_csv("content/GBPUSD_1440.csv")
+print(dataset)
+dataset = dataset[["date", "close"]].values
 
 # Reverse the dataset
 reversed_dataset = np.flip(dataset, axis=0)
